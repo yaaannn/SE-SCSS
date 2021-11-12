@@ -60,7 +60,7 @@ namespace SE_SCSS
 
         private void button_selectCourse_Click(object sender, EventArgs e)
         {
-            string cno = dataGridView1.SelectedCells[0].Value.ToString();//获取选中课程的编号
+            string cno = dataGridView1.SelectedCells[0].Value.ToString();
             string sql = string.Format("select * from scourse where " +
                 "sno = '{0}' and cno = '{1}'", sno, cno);
             string sql1 = string.Format("insert into scourse values('{0}','{1}')", sno, cno);
