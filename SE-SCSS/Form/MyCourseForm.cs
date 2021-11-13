@@ -49,12 +49,8 @@ namespace SE_SCSS
             RefreshTable();
         }
 
-        private void MyCourseForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
 
-        }
-
-        private void button_withdrawCourse_Click(object sender, EventArgs e)
+        private void Button_withdrawCourse_Click(object sender, EventArgs e)
         {
             string cno = dataGridView1.SelectedCells[0].Value.ToString();
             //string sql = $"select * from scourse where sno = '{sno}' and cno = '{cno}'";
@@ -75,9 +71,5 @@ namespace SE_SCSS
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

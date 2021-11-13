@@ -35,5 +35,24 @@ namespace SE_SCSS
 
             }
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            string sname = textBox2.Text.ToString();
+            string ssex = textBox3.Text.ToString();
+            string sbirth = textBox4.Text.ToString();
+            string sphone = textBox5.Text.ToString();
+            string saddress = textBox6.Text.ToString();
+            string sql = $"update student set sname = '{sname}',ssex = '{ssex}',sbirth = '{sbirth}'," +
+                $"sphone = '{sphone}',saddress = '{saddress}' where sno = '{sno}'";
+            if (DbUtil.AppandData(sql))
+            {
+                MessageBox.Show("ok");
+            }
+            else
+            {
+                MessageBox.Show("false");
+            }
+        }
     }
 }

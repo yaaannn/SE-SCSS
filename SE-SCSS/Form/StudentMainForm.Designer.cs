@@ -34,6 +34,7 @@
             this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.我的课程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.我的成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +54,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.个人信息ToolStripMenuItem,
             this.我的课程ToolStripMenuItem,
-            this.退出toolStripMenuItem1});
+            this.退出toolStripMenuItem1,
+            this.我的成绩ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1300, 39);
@@ -66,7 +68,7 @@
             this.修改信息ToolStripMenuItem,
             this.修改密码ToolStripMenuItem});
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(130, 38);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(130, 35);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             // 
             // 修改信息ToolStripMenuItem
@@ -85,7 +87,7 @@
             // 我的课程ToolStripMenuItem
             // 
             this.我的课程ToolStripMenuItem.Name = "我的课程ToolStripMenuItem";
-            this.我的课程ToolStripMenuItem.Size = new System.Drawing.Size(130, 38);
+            this.我的课程ToolStripMenuItem.Size = new System.Drawing.Size(130, 35);
             this.我的课程ToolStripMenuItem.Text = "我的课程";
             this.我的课程ToolStripMenuItem.Click += new System.EventHandler(this.我的课程ToolStripMenuItem_Click);
             // 
@@ -93,9 +95,16 @@
             // 
             this.退出toolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.退出toolStripMenuItem1.Name = "退出toolStripMenuItem1";
-            this.退出toolStripMenuItem1.Size = new System.Drawing.Size(82, 38);
+            this.退出toolStripMenuItem1.Size = new System.Drawing.Size(82, 35);
             this.退出toolStripMenuItem1.Text = "退出";
             this.退出toolStripMenuItem1.Click += new System.EventHandler(this.退出toolStripMenuItem1_Click);
+            // 
+            // 我的成绩ToolStripMenuItem
+            // 
+            this.我的成绩ToolStripMenuItem.Name = "我的成绩ToolStripMenuItem";
+            this.我的成绩ToolStripMenuItem.Size = new System.Drawing.Size(130, 35);
+            this.我的成绩ToolStripMenuItem.Text = "我的成绩";
+            this.我的成绩ToolStripMenuItem.Click += new System.EventHandler(this.我的成绩ToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -120,7 +129,6 @@
             this.dataGridView1.RowTemplate.Height = 37;
             this.dataGridView1.Size = new System.Drawing.Size(1300, 872);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -172,7 +180,7 @@
             this.button_selectCourse.TabIndex = 2;
             this.button_selectCourse.Text = "选择该课";
             this.button_selectCourse.UseVisualStyleBackColor = true;
-            this.button_selectCourse.Click += new System.EventHandler(this.button_selectCourse_Click);
+            this.button_selectCourse.Click += new System.EventHandler(this.Button_SelectCourse_Click);
             // 
             // StudentMainForm
             // 
@@ -184,7 +192,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StudentMainForm";
-            this.Text = "主窗口";
+            this.Text = "学生选课主窗口";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -211,5 +219,6 @@
         private System.Windows.Forms.ToolStripMenuItem 我的课程ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出toolStripMenuItem1;
         private System.Windows.Forms.Button button_selectCourse;
+        private System.Windows.Forms.ToolStripMenuItem 我的成绩ToolStripMenuItem;
     }
 }

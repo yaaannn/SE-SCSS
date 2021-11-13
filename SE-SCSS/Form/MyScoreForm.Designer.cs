@@ -1,6 +1,6 @@
 ﻿namespace SE_SCSS
 {
-    partial class MyCourseForm
+    partial class MyScoreForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_withdrawCourse = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,24 +42,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column6});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Column4});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 37;
-            this.dataGridView1.Size = new System.Drawing.Size(1046, 693);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Size = new System.Drawing.Size(803, 402);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Column1
             // 
@@ -67,6 +64,7 @@
             this.Column1.MinimumWidth = 10;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
             // 
             // Column2
             // 
@@ -74,6 +72,7 @@
             this.Column2.MinimumWidth = 10;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
             // 
             // Column3
             // 
@@ -81,54 +80,59 @@
             this.Column3.MinimumWidth = 10;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "课程学时";
+            this.Column4.HeaderText = "课程成绩";
             this.Column4.MinimumWidth = 10;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
             // 
-            // Column6
+            // textBox1
             // 
-            this.Column6.HeaderText = "开课教室";
-            this.Column6.MinimumWidth = 10;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(191, 486);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(128, 35);
+            this.textBox1.TabIndex = 1;
             // 
-            // button_withdrawCourse
+            // label1
             // 
-            this.button_withdrawCourse.Location = new System.Drawing.Point(765, 543);
-            this.button_withdrawCourse.Name = "button_withdrawCourse";
-            this.button_withdrawCourse.Size = new System.Drawing.Size(187, 84);
-            this.button_withdrawCourse.TabIndex = 3;
-            this.button_withdrawCourse.Text = "退选此课";
-            this.button_withdrawCourse.UseVisualStyleBackColor = true;
-            this.button_withdrawCourse.Click += new System.EventHandler(this.Button_withdrawCourse_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 489);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "平均成绩";
             // 
-            // MyCourseForm
+            // MyScoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 693);
-            this.Controls.Add(this.button_withdrawCourse);
+            this.ClientSize = new System.Drawing.Size(803, 596);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "MyCourseForm";
-            this.Text = "我的选课";
-            this.Load += new System.EventHandler(this.MyCourseForm_Load);
+            this.Name = "MyScoreForm";
+            this.Text = "我的成绩";
+            this.Load += new System.EventHandler(this.MyScoreForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button_withdrawCourse;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

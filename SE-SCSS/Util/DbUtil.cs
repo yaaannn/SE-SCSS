@@ -14,6 +14,7 @@ namespace SE_SCSS
             "server=127.0.0.1;port=3306;user=root;password=heyan5201314;database=scss;";
         private static MySqlCommand cmd;
         private static MySqlConnection conn;
+        private static MySqlDataAdapter adp;
         public static MySqlConnection GetConn()
         {
             conn = new MySqlConnection(connStr);
@@ -38,13 +39,11 @@ namespace SE_SCSS
             return cmd.ExecuteReader();
         }
 
-        public static void CloseConn(MySqlConnection conn)
+        public static MySqlDataAdapter DataAdapter(string sql)
         {
-            if (conn != null)
-            {
-                conn.Close();
-            }
+            conn = GetConn();
+            adp = new MySqlDataAdapter(sql, conn);
+            return adp;
         }
-
     }
 }

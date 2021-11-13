@@ -24,7 +24,7 @@ namespace SE_SCSS
 
         }
 
-        private void button_login_Click(object sender, EventArgs e)
+        private void Button_Login_Click(object sender, EventArgs e)
         {
             string id = textBox_id.Text.Trim();
             string pwd = textBox_pwd.Text.Trim();
@@ -38,33 +38,28 @@ namespace SE_SCSS
                 var dr = DbUtil.DataReader(sql);
                 if (dr.Read())
                 {
-                    string SNO = dr["sno"].ToString();
-                    StudentMainForm studentMainForm = new StudentMainForm(SNO);
-                    MessageBox.Show(SNO);
+                    string sno = dr["sno"].ToString();
+                    StudentMainForm studentMainForm = new StudentMainForm(sno);
+                    MessageBox.Show(sno);
                     studentMainForm.ShowDialog();
                 }
             }
             else if (role == "教师")
             {
-                string sql = string.Format("select tno, tpwd from teacher " +
-                    "where tno = '{0}' and tpwd = '{1}'"
-                    , id, pwd);
+                string sql = $"select tno, tpwd from teacher where tno = '{id}' and tpwd = '{pwd}'";
                 var dr = DbUtil.DataReader(sql);
                 if (dr.Read())
                 {
+                    string tno = dr["tno"].ToString();
+                    TeacherMainForm teacherMainForm = new TeacherMainForm(tno);
+                    MessageBox.Show(tno);
+                    teacherMainForm.ShowDialog();
 
-                    //StudentMainForm studentMainForm = new StudentMainForm();
-                    //studentMainForm.ShowDialog();
                 }
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_cancel_Click(object sender, EventArgs e)
+        private void Button_Cancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

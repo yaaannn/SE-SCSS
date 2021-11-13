@@ -22,7 +22,7 @@ namespace SE_SCSS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            string sql = "select course.cno,cname,ccredit,ctime,tname ,croom from tcourse,teacher,course ";
+            string sql = "select course.cno ,cname,ccredit,ctime,tname ,croom from tcourse,teacher,course ";
             var dr = DbUtil.DataReader(sql);
             while (dr.Read())
             {
@@ -35,16 +35,14 @@ namespace SE_SCSS
                 f = dr[5].ToString();
                 string[] str = { a, b, c, d, e1, f };
                 dataGridView1.Rows.Add(str);
-
             }
+            //var adp = DbUtil.DataAdapter(sql);
+            //DataSet ds = new DataSet();
+            //adp.Fill(ds);
+            //dataGridView1.DataSource = ds.Tables[0].DefaultView;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -60,7 +58,7 @@ namespace SE_SCSS
             Application.Exit();
         }
 
-        private void button_selectCourse_Click(object sender, EventArgs e)
+        private void Button_SelectCourse_Click(object sender, EventArgs e)
         {
             string cno = dataGridView1.SelectedCells[0].Value.ToString();
             string sql = $"select * from scourse where " +
@@ -68,7 +66,7 @@ namespace SE_SCSS
             var dr = DbUtil.DataReader(sql);
             if (!dr.Read())
             {
-                string sql1 = $"insert into scourse values('{sno}','{cno}')";
+                string sql1 = $"insert into scourse values('{sno}','{cno}',null)";
                 if (DbUtil.AppandData(sql1))
                     MessageBox.Show("选课成功", "成功");
                 else
@@ -88,6 +86,12 @@ namespace SE_SCSS
             //this.Hide();
             myCourseForm.ShowDialog();
 
+        }
+
+        private void 我的成绩ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyScoreForm myScoreForm = new MyScoreForm(sno);
+            myScoreForm.ShowDialog();
         }
     }
 }

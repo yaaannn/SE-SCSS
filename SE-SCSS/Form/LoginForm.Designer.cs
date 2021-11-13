@@ -46,7 +46,7 @@
             this.button_login.TabIndex = 0;
             this.button_login.Text = "登录";
             this.button_login.UseVisualStyleBackColor = true;
-            this.button_login.Click += new System.EventHandler(this.button_login_Click);
+            this.button_login.Click += new System.EventHandler(this.Button_Login_Click);
             // 
             // textBox_id
             // 
@@ -73,7 +73,6 @@
             this.label1.Size = new System.Drawing.Size(82, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "用户名";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -92,7 +91,7 @@
             this.button_cancel.TabIndex = 5;
             this.button_cancel.Text = "取消";
             this.button_cancel.UseVisualStyleBackColor = true;
-            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
+            this.button_cancel.Click += new System.EventHandler(this.Button_Cancel_Click);
             // 
             // label3
             // 

@@ -40,6 +40,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -140,11 +141,22 @@
             this.textBox6.Size = new System.Drawing.Size(207, 35);
             this.textBox6.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(164, 542);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 68);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "确认修改";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // ModifyStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 667);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -158,7 +170,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ModifyStudentInfo";
-            this.Text = "ModifyStudentInfo";
+            this.Text = "修改个人信息";
             this.Load += new System.EventHandler(this.ModifyStudentInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,5 +191,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button1;
     }
 }
