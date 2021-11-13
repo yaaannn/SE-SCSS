@@ -61,6 +61,7 @@
             this.textBox_pwd.Location = new System.Drawing.Point(257, 191);
             this.textBox_pwd.Multiline = true;
             this.textBox_pwd.Name = "textBox_pwd";
+            this.textBox_pwd.PasswordChar = '*';
             this.textBox_pwd.Size = new System.Drawing.Size(251, 40);
             this.textBox_pwd.TabIndex = 2;
             // 

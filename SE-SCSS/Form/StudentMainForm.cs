@@ -13,7 +13,7 @@ namespace SE_SCSS
 {
     public partial class StudentMainForm : Form
     {
-        string sno;
+        private string sno;
         public StudentMainForm(string sno)
         {
             this.sno = sno;
@@ -35,6 +35,7 @@ namespace SE_SCSS
                 f = dr[5].ToString();
                 string[] str = { a, b, c, d, e1, f };
                 dataGridView1.Rows.Add(str);
+
             }
         }
 
@@ -50,7 +51,8 @@ namespace SE_SCSS
 
         private void 修改信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ModifyStudentInfo modifyStudentInfo = new ModifyStudentInfo(sno);
+            modifyStudentInfo.ShowDialog();
         }
 
         private void 退出toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -61,12 +63,12 @@ namespace SE_SCSS
         private void button_selectCourse_Click(object sender, EventArgs e)
         {
             string cno = dataGridView1.SelectedCells[0].Value.ToString();
-            string sql = string.Format("select * from scourse where " +
-                "sno = '{0}' and cno = '{1}'", sno, cno);
-            string sql1 = string.Format("insert into scourse values('{0}','{1}')", sno, cno);
+            string sql = $"select * from scourse where " +
+                $"sno = '{sno}' and cno = '{cno}'";
             var dr = DbUtil.DataReader(sql);
             if (!dr.Read())
             {
+                string sql1 = $"insert into scourse values('{sno}','{cno}')";
                 if (DbUtil.AppandData(sql1))
                     MessageBox.Show("选课成功", "成功");
                 else

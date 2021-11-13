@@ -12,15 +12,16 @@ namespace SE_SCSS
 {
     public partial class MyCourseForm : Form
     {
-        string sno;
+        private string sno;
         public MyCourseForm(string sno)
         {
             this.sno = sno;
             InitializeComponent();
         }
 
-        private void MyCourseForm_Load(object sender, EventArgs e)
+        private void RefreshTable()
         {
+            dataGridView1.Rows.Clear();
             string sql1 = $"select * from scourse where sno = {sno}";
             var dr1 = DbUtil.DataReader(sql1);
 
@@ -43,7 +44,38 @@ namespace SE_SCSS
             }
         }
 
+        private void MyCourseForm_Load(object sender, EventArgs e)
+        {
+            RefreshTable();
+        }
+
         private void MyCourseForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void button_withdrawCourse_Click(object sender, EventArgs e)
+        {
+            string cno = dataGridView1.SelectedCells[0].Value.ToString();
+            //string sql = $"select * from scourse where sno = '{sno}' and cno = '{cno}'";
+            //var dr = DbUtil.DataReader(sql);
+
+            string sql1 = $"delete from scourse where sno = {sno} and cno = {cno}";
+            if (DbUtil.AppandData(sql1))
+            {
+                MessageBox.Show("ok");
+                RefreshTable();
+
+            }
+            else
+            {
+                MessageBox.Show("false");
+            }
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

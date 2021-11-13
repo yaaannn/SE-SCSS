@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_withdrawCourse = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,6 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
             this.Column6});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -61,6 +60,17 @@
             this.dataGridView1.RowTemplate.Height = 37;
             this.dataGridView1.Size = new System.Drawing.Size(1046, 693);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button_withdrawCourse
+            // 
+            this.button_withdrawCourse.Location = new System.Drawing.Point(765, 543);
+            this.button_withdrawCourse.Name = "button_withdrawCourse";
+            this.button_withdrawCourse.Size = new System.Drawing.Size(187, 84);
+            this.button_withdrawCourse.TabIndex = 3;
+            this.button_withdrawCourse.Text = "退选此课";
+            this.button_withdrawCourse.UseVisualStyleBackColor = true;
+            this.button_withdrawCourse.Click += new System.EventHandler(this.button_withdrawCourse_Click);
             // 
             // Column1
             // 
@@ -90,13 +100,6 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "授课教师";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // Column6
             // 
             this.Column6.HeaderText = "开课教室";
@@ -109,6 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 693);
+            this.Controls.Add(this.button_withdrawCourse);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MyCourseForm";
             this.Text = "MyCourseForm";
@@ -122,11 +126,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_withdrawCourse;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
