@@ -58,7 +58,7 @@
             this.我的成绩ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1300, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(1300, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,14 +74,14 @@
             // 修改信息ToolStripMenuItem
             // 
             this.修改信息ToolStripMenuItem.Name = "修改信息ToolStripMenuItem";
-            this.修改信息ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.修改信息ToolStripMenuItem.Size = new System.Drawing.Size(243, 44);
             this.修改信息ToolStripMenuItem.Text = "修改信息";
             this.修改信息ToolStripMenuItem.Click += new System.EventHandler(this.修改信息ToolStripMenuItem_Click);
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(243, 44);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             // 
             // 我的课程ToolStripMenuItem
@@ -121,13 +121,13 @@
             this.Column5,
             this.Column6});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 37;
-            this.dataGridView1.Size = new System.Drawing.Size(1300, 872);
+            this.dataGridView1.Size = new System.Drawing.Size(1300, 869);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1

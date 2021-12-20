@@ -88,7 +88,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "ModifyStudentScore";
-            this.Text = "ModifyStudentScore";
+            this.Text = "修改学生成绩";
             this.Load += new System.EventHandler(this.ModifyStudentScore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

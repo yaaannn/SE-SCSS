@@ -40,7 +40,7 @@ namespace SE_SCSS
                 {
                     string sno = dr["sno"].ToString();
                     StudentMainForm studentMainForm = new StudentMainForm(sno);
-                    MessageBox.Show(sno);
+                    MessageBox.Show("登录成功");
                     studentMainForm.ShowDialog();
                 }
             }
@@ -52,7 +52,7 @@ namespace SE_SCSS
                 {
                     string tno = dr["tno"].ToString();
                     TeacherMainForm teacherMainForm = new TeacherMainForm(tno);
-                    MessageBox.Show(tno);
+                    MessageBox.Show("登录成功");
                     teacherMainForm.ShowDialog();
 
                 }

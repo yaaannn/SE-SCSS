@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.修改成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.刷新成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.刷新成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -56,6 +56,20 @@
             this.menuStrip1.Size = new System.Drawing.Size(1000, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 修改成绩ToolStripMenuItem
+            // 
+            this.修改成绩ToolStripMenuItem.Name = "修改成绩ToolStripMenuItem";
+            this.修改成绩ToolStripMenuItem.Size = new System.Drawing.Size(130, 35);
+            this.修改成绩ToolStripMenuItem.Text = "修改成绩";
+            this.修改成绩ToolStripMenuItem.Click += new System.EventHandler(this.修改成绩ToolStripMenuItem_Click);
+            // 
+            // 刷新成绩ToolStripMenuItem
+            // 
+            this.刷新成绩ToolStripMenuItem.Name = "刷新成绩ToolStripMenuItem";
+            this.刷新成绩ToolStripMenuItem.Size = new System.Drawing.Size(130, 35);
+            this.刷新成绩ToolStripMenuItem.Text = "刷新成绩";
+            this.刷新成绩ToolStripMenuItem.Click += new System.EventHandler(this.刷新成绩ToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -76,30 +90,6 @@
             this.dataGridView1.RowTemplate.Height = 37;
             this.dataGridView1.Size = new System.Drawing.Size(1000, 503);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // 修改成绩ToolStripMenuItem
-            // 
-            this.修改成绩ToolStripMenuItem.Name = "修改成绩ToolStripMenuItem";
-            this.修改成绩ToolStripMenuItem.Size = new System.Drawing.Size(130, 38);
-            this.修改成绩ToolStripMenuItem.Text = "修改成绩";
-            this.修改成绩ToolStripMenuItem.Click += new System.EventHandler(this.修改成绩ToolStripMenuItem_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 501);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1000, 41);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(62, 31);
-            this.toolStripStatusLabel1.Text = "欢迎";
             // 
             // Column1
             // 
@@ -136,12 +126,22 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 200;
             // 
-            // 刷新成绩ToolStripMenuItem
+            // statusStrip1
             // 
-            this.刷新成绩ToolStripMenuItem.Name = "刷新成绩ToolStripMenuItem";
-            this.刷新成绩ToolStripMenuItem.Size = new System.Drawing.Size(130, 38);
-            this.刷新成绩ToolStripMenuItem.Text = "刷新成绩";
-            this.刷新成绩ToolStripMenuItem.Click += new System.EventHandler(this.刷新成绩ToolStripMenuItem_Click);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 501);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1000, 41);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(62, 31);
+            this.toolStripStatusLabel1.Text = "欢迎";
             // 
             // TeacherMainForm
             // 
@@ -153,7 +153,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TeacherMainForm";
-            this.Text = "TeacherMainForm";
+            this.Text = "教师主窗体";
             this.Load += new System.EventHandler(this.TeacherMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
